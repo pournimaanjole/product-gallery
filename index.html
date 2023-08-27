@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="imggallery">
+        
+        <div class="similar">
+            <img src="./img/img1.webp" alt="" onclick="img1('./img/img1.webp','./img/img5.webp','./img/img9.webp','./img/img13.webp',2)"  class="similarimges" id="img2">
+
+            <img src="./img/img2.webp" alt="" onclick="img1('./img/img2.webp','./img/img6.webp','./img/img10.webp','./img/img14.webp',3)" class="similarimges"  id="img3">
+            <img src="./img/img3.webp" alt="" onclick="img1('./img/img3.webp','./img/img7.webp','./img/img11.webp','./img/img15.webp',4)"  class="similarimges"  id="img4">
+            <img src="./img/img4.webp" alt="" onclick="img1('./img/img4.webp','./img/img8.webp','./img/img12.webp','./img/img16.webp',5)" class="similarimges"  id="img5">
+        </div>
+       <div class="img">
+        <img src="./img/img1.webp" alt="" class="productimg" id="mainimge">
+       </div>
+       <div class="similarimg">
+        <h2>similar product</h2>
+        <img src="./img/img1.webp" alt="" class="similarimges space"  onclick="productchange1()">
+        <img src="./img/img5.webp" alt="" class="similarimges space" onclick="productchange2()">
+        <img src="./img/img9.webp" alt="" class="similarimges space"  onclick="productchange3()">
+        <img src="./img/img13.webp" alt="" class="similarimges space"  onclick="productchange4()">
+       </div>
+       
+        
+    </div>
+    <script>
+       let mainimage1=document.getElementById("mainimge");
+       let smallimge1=document.getElementById("img2");
+       let smallimge2=document.getElementById("img3");
+       let smallimge3=document.getElementById("img4");
+       let smallimge4=document.getElementById("img5");
+        function img1(img1,img2,img3,img4,index){
+            let mainimage1=document.getElementById("mainimge");
+           if(mainimage1.src==img1){
+            const img=document.getElementById(`img${index}`)
+            mainimage1.src=img.src
+           }
+           else if(mainimage1.src==img2){
+            const img=document.getElementById(`img${index}`)
+            mainimage1.src=img.src
+    
+           }
+           else if(mainimage1.src==img3){
+            const img=document.getElementById(`img${index}`)
+            mainimage1.src=img.src
+    
+           }
+           else{
+            const img=document.getElementById(`img${index}`)
+            mainimage1.src=img.src
+    
+           }
+            
+           
+        }
+        function productchange1(){
+            mainimage1.src="./img/img1.webp";
+            smallimge1.src="./img/img1.webp";
+            smallimge2.src="./img/img2.webp";
+            smallimge3.src="./img/img3.webp";
+            smallimge4.src="./img/img4.webp";
+
+
+        }
+        function productchange2(){
+            mainimage1.src="./img/img5.webp";
+            smallimge1.src="./img/img5.webp";
+            smallimge2.src="./img/img6.webp";
+            smallimge3.src="./img/img7.webp";
+            smallimge4.src="./img/img8.webp";
+
+
+        }
+        function productchange3(){
+            mainimage1.src="./img/img9.webp";
+            smallimge1.src="./img/img9.webp";
+            smallimge2.src="./img/img10.webp";
+            smallimge3.src="./img/img11.webp";
+            smallimge4.src="./img/img12.webp";
+
+
+        }
+        function productchange4(){
+            mainimage1.src="./img/img13.webp";
+            smallimge1.src="./img/img13.webp";
+            smallimge2.src="./img/img14.webp";
+            smallimge3.src="./img/img15.webp";
+            smallimge4.src="./img/img16.webp";
+
+
+        }
+       
+       
+       
+      
+
+    </script>
+</body>
+</html>
